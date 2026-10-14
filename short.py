@@ -17,6 +17,13 @@ def decode(s):
         num = num * 62 + CHARS.index(c)
     return num
 
+counter = 1000
+
+def generate_code():
+    global counter
+    counter += 1
+    return encode(counter)
+
 # Test
 if __name__ == "__main__":
     for i in [0, 1, 61, 62, 100, 10000, 999999]:
